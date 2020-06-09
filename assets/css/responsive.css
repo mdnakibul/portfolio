@@ -1,0 +1,9 @@
+/*******************************
+	All Responsive Code
+*******************************/
+
+@media only screen and (max-width:991px){
+	.main-menu ul li a{
+		padding:24px 0px;
+	}
+}
