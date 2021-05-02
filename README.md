@@ -1,5 +1,5 @@
-# nandine
-A PSD to HTML project. It is a portfolio template. 
+# My Portfolio
+This is my portfolio site. Have a look on that!
 ## Technology Used : 
 1. HTML
 2.CSS
@@ -8,4 +8,4 @@ A PSD to HTML project. It is a portfolio template.
 5. Bootstrap 4.0
 
 ## Live link : 
-https://mdnakibul.github.io/nandine
+https://mdnakibul.github.io/portfolio
