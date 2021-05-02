@@ -161,7 +161,7 @@ button.navbar-toggler{
 
 }
 
-.header-content a{
+.header-content a, .default-btn{
     text-decoration: none;
     color: #fff;
     background: #ff0000;
@@ -172,7 +172,7 @@ button.navbar-toggler{
     font-weight: 600;
     transition: 0.3s;
 }
-.header-content a:hover{
+.header-content a:hover , .default-btn:hover{
     color: #ff0000;
     background: #fff;
 }
@@ -543,7 +543,10 @@ span.counter {
     width: 100%;
     height: auto;
 }
-  
+
+.portfolioCard img.image{
+    min-height: 240px;
+}
   .overlay {
     position: absolute;
     top: 0;
@@ -558,7 +561,7 @@ span.counter {
   }
   
   .portfolioCard:hover .overlay {
-    opacity: 0.5;
+    opacity: 0.9;
   }
   
   .text {
@@ -572,6 +575,11 @@ span.counter {
     transform: translate(-50%, -50%);
     text-align: center;
   }
+
+  .text a {
+    color: #000;
+    display: inline-block;
+}
 
   /*
 ==========================================
