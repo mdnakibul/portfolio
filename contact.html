@@ -48,7 +48,7 @@
                         <li><a href="./index.html#skill">Skill</a></li>
                         <li><a href="./portfolio.html">Portfolio</a></li>
                         <li><a href="./index.html#testimonial">Testimonial</a></li>
-                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./index.html#blog">Blog</a></li>
                         <li><a href="#">Contact</a></li> 
                     </ul>
                 </div> 
@@ -89,10 +89,10 @@
         </div>
         <!-- Contact Form  -->
         <div class="container content-top-space">
-            <form action="action.php" method="post">
+            <form name="portfolio-form" method="post" enctype="text/plain">
                 <div class="row">
                     <div class="col-md-6 name">
-                        <input type="text" name="username" id="" placeholder="Name">
+                        <input type="text" name="name" id="" placeholder="Name">
                     </div>
                     <div class="col-md-6 name">
                         <input type="text" name="email" id="" placeholder="Email">
@@ -103,9 +103,14 @@
                         <input type="text" name="message" id="" placeholder="Text Message">
                     </div>
                 </div>
+                <div class="row d-none">
+                    <div class="col-md-12 message">
+                        <input type="text" name="Timestamp" id="timestamp" placeholder="Timestamp" value="new Date()">
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12 submitbtn">
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="submit" class="btn" name="submit">Send Message</button>
                     </div>
                 </div>
             </form>
@@ -138,6 +143,18 @@
 </section>
 
 <script type="text/javascript" src="assets/js/plugin/wow.min.js"></script>
-<script type="text/javascript" src="assets/js/main.js"></script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw92b-1es8mpfnXHmfgPe5wqz-aRrBf0b5hd7z3WIn50To74P9ArQWfTd4UNi-zw4RyxA/exec'
+    const form = document.forms['portfolio-form']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        console.log('Hit Submit');
+        document.getElementById('timestamp').value = new Date();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+    })
+</script>
 </body>
 </html>

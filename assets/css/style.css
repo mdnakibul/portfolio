@@ -707,8 +707,8 @@ span.counter {
     transform: scale(1.1);
 }
 .blog-item img {
-    width: 100%;
-    height: auto;
+    width: 350px;
+    height: 235px;
     border-bottom: 5px solid #ff0000;
 }
 
